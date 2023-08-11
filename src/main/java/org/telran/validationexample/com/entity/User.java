@@ -17,7 +17,9 @@ public class User {
     private List<Account> accounts = new ArrayList<>();
 
     @NotBlank(message = "Field name is mandatory")
-    private String cd ;
+    private String name;
+    @NotBlank
+    private String email;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "profile_id", referencedColumnName = "id")
